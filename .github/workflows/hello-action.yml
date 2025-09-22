@@ -1,0 +1,18 @@
+# /.github/workflows
+
+# Workflow konfiguration
+name: Hello World Workflow
+
+# Events
+on: 
+    push:
+        branches:
+            - main
+
+# Jobs
+jobs:
+    say-hello:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Aktuelles Verzeichnis ansehen
+              run: pwd && ls -al 
