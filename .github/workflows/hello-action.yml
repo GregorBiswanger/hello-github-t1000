@@ -15,4 +15,13 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Aktuelles Verzeichnis ansehen
-              run: pwd && ls -al 
+              run: pwd && ls -al
+
+            - name: Checkout files
+              uses: actions/checkout@v4.2.2
+
+            - name: JavaScript ausführen
+              run: node \test\hello-world.js
+
+            - name: Aktuelles Verzeichnis ansehen
+              run: pwd && ls -al
